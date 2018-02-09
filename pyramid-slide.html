@@ -5,18 +5,65 @@
         #pyramid {
             line-height: 0;
             font-size: 30px;
+            color:#99588c;
         }
 
         body {
             font-family: "Courier New", monospace;
             text-align: center;
+            background-color: #eeeeeef1;
+        }
+
+        h1 {
+            background-color: #99588c;
+            color:#e8e3e7;
+            
+            padding:50px;
+            margin-left:50px;
+            margin-right:50px;
+            margin-top:0px;
         }
 
         form {
             display: inline;
-
+            padding: 25px;
+            background-color: #b2b3b7;
         }
 
+        #formBlock {
+            margin:0px;
+        }
+
+        #symbolform {
+            margin-left: 0px;
+        }
+
+        #slider {
+            margin-right: 0px;
+        }
+        select {
+            background-color: #f1f1f1;
+            font-size: 20px;
+        }
+
+        #demo {
+            font-weight: bold;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        #main {
+            border:2px;
+            border-color:#99588c;
+            border-style: solid;
+            border-radius: 5px;
+            background-color: #e8e3e7;
+            margin-right:225px;
+            margin-left:225px;
+            margin-bottom:100px;
+            margin-top: 25px;
+
+        }
     </style>
 </head>
 <body >
@@ -24,29 +71,28 @@
 
     <br>
 
-    
-    <form>
-        <label>Brick symbol:</label>
-        <select id='symbol'>
-            <option value='#'>#</option>
-            <option value='@'>@</option>
-            <option value='X'>X</option>
-            <option value='$'>$</option>
-        </select>
-    </form>
-        
-    <form id="slider">
-        <label>How high?</label>
-        <input type="range" name='height' id='height' min='1' max='20' value='8'><span id='demo'></span>
-    </form>
-    
+    <div id='main'>
+        <br>
+        <div id='formBlock'>
+            <form id='symbolForm'>
+                <label>Brick symbol:</label>
+                <select id='symbol'>
+                    <option value='#'>#</option>
+                    <option value='@'>@</option>
+                    <option value='X'>X</option>
+                    <option value='$'>$</option>
+                </select>
+            </form>
+                
+            <form id="slider">
+                <label>How high?</label>
+                <input type="range" name='height' id='height' min='1' max='20' value='8'><span id='demo'></span>
+            </form>
+        </div>
+        <br><br>
 
-    
-
-    
-    <br><br>
-
-    <div id="pyramid"></div>
+        <div id="pyramid"></div>
+    </div>
 
     <script src="pyramid-slide.js"></script>
 </body>
